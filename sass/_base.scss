@@ -12,8 +12,16 @@
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
 
+  --font-size-base: 1.6rem;
+
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 }
+
+$break-largest: 75em; //1200px
+$break-large: 68.75em; //1100px
+$break-medium: 56.56em; //900px
+$break-small: 37.5em; //600px
+$break-smallest: 31.25em; //500px
 
 *,
 *::after,
@@ -25,9 +33,14 @@
 
 html {
   font-size: 62.5%;
+
+  @media only screen and (max-width: $break-large) {
+    font-size: 50%;
+  }
 }
 body {
   font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-size-base);
   font-weight: 400;
   color: var(--color-grey-dark-2);
   line-height: 1.6;
